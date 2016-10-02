@@ -9,4 +9,10 @@ public class Entertainment extends AbstractPersistable<Long> {
     private int duration;
     private int price;
 
+    public Entertainment(String name, String description, int duration, int price) {
+        Name = name;
+        Description = description;
+        this.duration = duration;
+        this.price = price;
+    }
 }

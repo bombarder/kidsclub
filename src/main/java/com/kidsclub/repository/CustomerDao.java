@@ -1,8 +1,8 @@
 package com.kidsclub.repository;
 
-import com.kidsclub.model.User;
+import com.kidsclub.model.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CustomerDao extends JpaRepository<User, Long> {
+public interface CustomerDao extends JpaRepository<Customer, Long> {
 
 }

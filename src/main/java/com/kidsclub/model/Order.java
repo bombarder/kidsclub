@@ -8,9 +8,9 @@ public class Order extends AbstractPersistable<Long> {
 
     private Entertainment entertainment;
     private ArrayList<Food> foodList;
-    private User buyer;
+    private Customer buyer;
 
-    public Order(Entertainment entertainment, ArrayList<Food> foodList, User buyer) {
+    public Order(Entertainment entertainment, ArrayList<Food> foodList, Customer buyer) {
         this.entertainment = entertainment;
         this.foodList = foodList;
         this.buyer = buyer;
