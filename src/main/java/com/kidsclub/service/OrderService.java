@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface OrderService {
-    Order createOrder(Entertainment entertainment, ArrayList<Food> foodList, int itemsQuantity, User buyer);
+    Order createOrder(Entertainment entertainment, ArrayList<Food> foodList, User buyer);
     List<Order> getActiveOrders();
     void closeOrder(Order order);
 
