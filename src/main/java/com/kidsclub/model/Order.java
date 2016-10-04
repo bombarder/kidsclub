@@ -1,24 +1,16 @@
 package com.kidsclub.model;
 
-import org.springframework.data.annotation.Id;
+
+import lombok.Data;
 import org.springframework.data.jpa.domain.AbstractPersistable;
-
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import java.util.ArrayList;
 
+@Data
 @Entity
 public class Order extends AbstractPersistable<Long> {
 
-
     private Entertainment entertainment;
-    private ArrayList<Food> foodList;
+    private Food food;
     private Customer buyer;
 
-    public Order(Entertainment entertainment, ArrayList<Food> foodList, Customer buyer) {
-        this.entertainment = entertainment;
-        this.foodList = foodList;
-        this.buyer = buyer;
-    }
 }

@@ -21,8 +21,11 @@ public class OrderServiceImpl implements OrderService {
     OrderDao orderDao;
 
     @Override
-    public Order createOrder(Entertainment entertainment, ArrayList<Food> foodList, Customer buyer) {
-        Order order = new Order(entertainment, foodList, buyer);
+    public Order createOrder(Entertainment entertainment, Food food, Customer buyer) {
+        Order order = new Order();
+        order.setEntertainment(entertainment);
+        order.setFood(food);
+        order.setBuyer(buyer);
         return order;
     }
 

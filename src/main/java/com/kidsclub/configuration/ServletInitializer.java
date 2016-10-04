@@ -1,4 +1,4 @@
-package com.kidsclub;
+package com.kidsclub.configuration;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;

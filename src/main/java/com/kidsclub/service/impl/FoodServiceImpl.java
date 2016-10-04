@@ -18,7 +18,13 @@ public class FoodServiceImpl implements FoodService {
 
     @Override
     public Food createFood(String name, String description, int price) {
-        Food food = new Food(name, description, price);
+        Food food = new Food();
+        food.setName(name);
+        food.setDescription(description);
+        food.setPrice(price);
         return food;
+    }
+    public void addFood(Food food){
+        foodDao.save(food);
     }
 }
