@@ -15,5 +15,6 @@ public class KidsClubApplication {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = SpringApplication.run(KidsClubApplication.class, args);
 		CustomerService bean = context.getBean(CustomerService.class);
+
 	}
 }
