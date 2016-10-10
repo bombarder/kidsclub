@@ -9,8 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface OrderService {
-    Order createOrder(Entertainment entertainment, Food food, Customer buyer);
-    List<Order> getActiveOrders();
-    void closeOrder(Order order);
+    Order save(Order order);
+
+    List<Order> findAll();
+
+    Order findOne(long id);
 
 }

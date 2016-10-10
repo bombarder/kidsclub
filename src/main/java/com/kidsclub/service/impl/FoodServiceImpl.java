@@ -11,20 +11,19 @@ public class FoodServiceImpl implements FoodService {
 
     @Autowired
     FoodDao foodDao;
+
     @Override
-    public List<Food> getAll() {
+    public Food save(Food food) {
+        return foodDao.save(food);
+    }
+
+    @Override
+    public List<Food> findAll() {
         return foodDao.findAll();
     }
 
     @Override
-    public Food createFood(String name, String description, int price) {
-        Food food = new Food();
-        food.setName(name);
-        food.setDescription(description);
-        food.setPrice(price);
-        return food;
-    }
-    public void addFood(Food food){
-        foodDao.save(food);
+    public Food findOne(long id) {
+        return foodDao.findOne(id);
     }
 }

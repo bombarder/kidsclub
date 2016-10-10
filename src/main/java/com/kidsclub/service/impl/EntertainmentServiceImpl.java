@@ -1,5 +1,6 @@
 package com.kidsclub.service.impl;
 
+import com.kidsclub.model.Customer;
 import com.kidsclub.model.Entertainment;
 import com.kidsclub.repository.EntertainmentDao;
 import com.kidsclub.service.EntertainmentService;
@@ -17,20 +18,17 @@ public class EntertainmentServiceImpl implements EntertainmentService {
     EntertainmentDao entertainmentDao;
 
     @Override
-    public List<Entertainment> getAll() {
+    public Entertainment save(Entertainment entertainment){
+        return entertainmentDao.save(entertainment);
+    }
+
+    @Override
+    public List<Entertainment> findAll() {
         return entertainmentDao.findAll();
     }
 
     @Override
-    public Entertainment createEntertainment(String name, String description, int duration, int price) {
-        Entertainment entertainment = new Entertainment();
-        entertainment.setName(name);
-        entertainment.setDescription(description);
-        entertainment.setDuration(duration);
-        entertainment.setPrice(price);
-        return entertainment;
-    }
-    public void addEntertainment(Entertainment entertainment){
-        entertainmentDao.save(entertainment);
+    public Entertainment findOne(long id) {
+        return entertainmentDao.findOne(id);
     }
 }
