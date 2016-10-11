@@ -2,7 +2,6 @@ package com.kidsclub.service;
 
 
 import com.kidsclub.model.Entertainment;
-
 import java.util.List;
 
 

@@ -1,7 +1,6 @@
 package com.kidsclub.service;
 
 import com.kidsclub.model.Food;
-
 import java.util.List;
 
 public interface FoodService {

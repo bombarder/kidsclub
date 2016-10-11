@@ -1,6 +1,5 @@
 package com.kidsclub.service.impl;
 
-import com.kidsclub.model.Customer;
 import com.kidsclub.model.Entertainment;
 import com.kidsclub.repository.EntertainmentDao;
 import com.kidsclub.service.EntertainmentService;

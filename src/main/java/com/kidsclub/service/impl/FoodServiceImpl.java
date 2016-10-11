@@ -3,10 +3,14 @@ package com.kidsclub.service.impl;
 import com.kidsclub.model.Food;
 import com.kidsclub.repository.FoodDao;
 import com.kidsclub.service.FoodService;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
+@Setter
 public class FoodServiceImpl implements FoodService {
 
     @Autowired
