@@ -1,0 +1,11 @@
+#myForm{
+    color: #ffffff;
+    text-align: center;
+}
+#myForm p{
+    display: none;
+    text-align: left;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-left: 10px;
+}
