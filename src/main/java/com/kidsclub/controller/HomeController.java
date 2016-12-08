@@ -26,7 +26,6 @@ public class HomeController {
 
     @RequestMapping(value = "/contact", method = RequestMethod.GET)
     public String contact(Model model) {
-//        model.addAttribute("customer", new Customer());
         return "contact";
     }
 
