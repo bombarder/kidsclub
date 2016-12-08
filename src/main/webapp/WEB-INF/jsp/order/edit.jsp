@@ -30,14 +30,14 @@
 <body >
 <div class="body">
 
-    <%--<spring:url value="getOrder" var="someUrl"/>--%>
-    <%--<h1><a href="${someUrl}">ссылка на order </a></h1>--%>
+    <spring:url value="getOrder" var="someUrl"/>
+    <h1><a href="${someUrl}">ссылка на order </a></h1>
 
     <spring:url value="getOrder" var="createUrl"/>
     <form action="${createUrl}" method="post" >
         <input type="text" name="entertainment" class="form-control"/>
         <input type="text" name="food" class="form-control"/>
-        <input type="text" name="customer" class="form-control"/>
+        <input type="text" name="buyer" class="form-control"/>
         <input class="btn  btn-primary" type="submit" value="send">
     </form>
 </div>

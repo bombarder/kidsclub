@@ -27,6 +27,6 @@ public class OrderController {
         model.addAttribute("entertainment", entertainmentServiceImpl.findAll());
         model.addAttribute("food", foodServiceImpl.findAll());
         model.addAttribute("customer", customerServiceImpl.findAll());
-        return "order/edit";
+        return "other-page";
     }
 }

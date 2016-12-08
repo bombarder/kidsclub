@@ -33,20 +33,6 @@
 <body>
 
 <div class="body">
-    <div class="col-xs-4 blackback">
-
-        <li data-geo-lat="48.458085" data-geo-long="35.057470">
-            <a href="#" onClick="showNext();">
-                <h3>Адрес кафе</h3>
-
-                <p class="longdesc">
-                    Адрес:<br/>
-                    ул. Юности, 1. Винница<br/>
-                    Винницкая область, Украина<br/>
-                    Телефон:(098) 530 5000<br/>
-                    e-mail: bombarder@mail.ru</p>
-            </a></li>
-    </div>
 
     <spring:url value="some" var="someUrl"/>
     <h1><a href="${someUrl}">ссылка на контроллер</a></h1>
