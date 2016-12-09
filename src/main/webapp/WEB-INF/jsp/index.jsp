@@ -57,8 +57,6 @@
                                 <img src="/images/hat.png" alt="">
                                 <!-- Описание слайда -->
                                 <div class="carousel-caption">
-                                    <h3> Лучшие </h3>
-
                                     <p>большой выбор </p>
                                 </div>
                             </a>
@@ -68,11 +66,6 @@
 
                 </div>
                 <br/>
-
-                <div class="container-fluid blackback">
-                    <h2>по новым программам</h2>
-
-                   </div>
             </div>
         </div>
 
