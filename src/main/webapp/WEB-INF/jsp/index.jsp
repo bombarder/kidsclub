@@ -57,39 +57,14 @@
                                 <img src="/images/hat.png" alt="">
                                 <!-- Описание слайда -->
                                 <div class="carousel-caption">
-                                    <h3> Лучшие автомобили</h3>
+                                    <h3> Лучшие </h3>
 
-                                    <p>Самый большой выбор авто для обучения </p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="item">
-                            <a href="/testing/search?idExam=1">
-                                <img src="/images/Porshe.png" alt="">
-                                <!-- Описание слайда -->
-                                <div class="carousel-caption">
-                                    <h3> Тесты онлайн</h3>
-
-                                    <p>Вопросы по всем категориям </p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="item">
-                            <a href="/futuregroups">
-                                <img src="/images/hat_3.png" alt="">
-                                <!-- Описание слайда -->
-                                <div class="carousel-caption">
-                                    <h3> Наши преподаватели</h3>
-
-                                    <p>У нас работают только лучшие </p>
+                                    <p>большой выбор </p>
                                 </div>
                             </a>
                         </div>
 
                     </div>
-
 
                 </div>
                 <br/>
