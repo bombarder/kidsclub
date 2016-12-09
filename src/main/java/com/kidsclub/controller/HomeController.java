@@ -15,39 +15,18 @@ import java.util.Random;
 @Controller
 public class HomeController {
 
-    @Value("${application.message:Hello World}")
-    private String message = "Hello World";
-
-    @RequestMapping(value = "/", method = {RequestMethod.GET, RequestMethod.HEAD})
-    public String index(Map<String, Object> model) {
-        model.put("message", this.message);
+    @RequestMapping(method = {RequestMethod.GET, RequestMethod.HEAD})
+    public String index() {
         return "index";
     }
 
-    @RequestMapping(value = "/contact", method = RequestMethod.GET)
-    public String contact(Model model) {
+    @RequestMapping(path = "/contact", method = RequestMethod.GET)
+    public String contact() {
         return "contact";
     }
 
-    @RequestMapping(value = "/some", method = RequestMethod.GET)
-    public String some(Model model) {
-        Customer customer = new Customer();
-        customer.setFirstName("Misha");
-        customer.setLastName("Kukuruza");
-        customer.setLogin("mk");
-
-        model.addAttribute("customer", customer);
-
-        return "other-page";
-    }
-
-    @RequestMapping(value = "/create", method = RequestMethod.POST)
-    public String some(Customer customer, Model model) {
-        customer.setLogin("" + customer.getFirstName().charAt(0) + customer.getLastName().charAt(0));
-
-        System.out.println("user saved to db " + customer);
-
-        model.addAttribute("customer", customer);
-        return "other-page";
+    @RequestMapping(path = "/order", method = RequestMethod.GET)
+    public String order() {
+        return "order";
     }
 }

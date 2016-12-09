@@ -1,7 +1,15 @@
 package com.kidsclub.controller;
 
-/**
- * Created by nmakarov on 08.12.2016.
- */
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@Controller
+@RequestMapping("/food")
 public class FoodController {
+
+    @RequestMapping(method = RequestMethod.GET)
+    public String food() {
+        return "food";
+    }
 }
