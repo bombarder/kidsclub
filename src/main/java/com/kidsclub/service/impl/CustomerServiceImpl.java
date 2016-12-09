@@ -3,14 +3,12 @@ package com.kidsclub.service.impl;
 import com.kidsclub.model.Customer;
 import com.kidsclub.repository.CustomerDao;
 import com.kidsclub.service.CustomerService;
-import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-@Setter
 public class CustomerServiceImpl implements CustomerService {
 
     @Autowired

@@ -39,10 +39,12 @@
 <spring:url value="entertainment" var="createEntertainment"/>
 
 <form action="${createEntertainment}" method="post" >
-<a href="/order/edit"><img src="/resources/images/birthdayParty.jpg"></a>
-<a href="/order/edit"><img src="/resources/images/pool.jpeg"></a>
-<a href="/order/edit"><img src="/resources/images/wpid-clown-pennywise.jpg"></a>
+<a href="/order/edit"><img src="resources/images/birthdayParty.jpg"></a>
+<a href="/order/edit"><img src="resources/images/pool.jpeg"></a>
+<a href="/order/edit"><img src="resources/images/wpid-clown-pennywise.jpg"></a>
 </form>
+<jsp:include page="footer.jsp"/>
 
+<script src="/js/home.js"></script>
 </body>
 </html>

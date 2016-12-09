@@ -3,14 +3,12 @@ package com.kidsclub.service.impl;
 import com.kidsclub.model.Entertainment;
 import com.kidsclub.repository.EntertainmentDao;
 import com.kidsclub.service.EntertainmentService;
-import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-@Setter
 public class EntertainmentServiceImpl implements EntertainmentService {
 
     @Autowired

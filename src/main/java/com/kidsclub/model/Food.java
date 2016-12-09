@@ -1,10 +1,9 @@
 package com.kidsclub.model;
 
-import lombok.Data;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 import javax.persistence.Entity;
 
-@Data
+
 @Entity
 public class Food extends AbstractPersistable<Long> {
 
@@ -12,5 +11,27 @@ public class Food extends AbstractPersistable<Long> {
     private String Description;
     private int price;
 
+    public String getName() {
+        return Name;
+    }
 
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public String getDescription() {
+        return Description;
+    }
+
+    public void setDescription(String description) {
+        Description = description;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
 }

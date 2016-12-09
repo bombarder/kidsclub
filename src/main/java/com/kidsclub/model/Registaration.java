@@ -10,5 +10,4 @@ public class Registaration extends AbstractPersistable<Long> {
     private int telephoneNumber;
     private String login;
     private String password;
-
 }

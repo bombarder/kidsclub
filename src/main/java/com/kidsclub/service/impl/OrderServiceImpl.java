@@ -4,14 +4,12 @@ package com.kidsclub.service.impl;
 import com.kidsclub.model.Order;
 import com.kidsclub.repository.OrderDao;
 import com.kidsclub.service.OrderService;
-import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-@Setter
 public class OrderServiceImpl implements OrderService {
 
     @Autowired

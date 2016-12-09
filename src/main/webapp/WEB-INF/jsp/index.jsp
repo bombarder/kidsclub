@@ -49,19 +49,6 @@
                         <li data-target="#carousel" data-slide-to="2"></li>
                     </ol>
 
-                    <!--слайды-->
-                    <div class="carousel-inner">
-
-                        <div class="item active">
-                            <a href="/cars">
-                                <img src="/images/hat.png" alt="">
-                                <!-- Описание слайда -->
-                                <div class="carousel-caption">
-                                    <p>большой выбор </p>
-                                </div>
-                            </a>
-                        </div>
-
                     </div>
 
                 </div>

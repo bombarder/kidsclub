@@ -33,9 +33,7 @@
 <body>
 
 <div class="body">
-
-    <spring:url value="some" var="someUrl"/>
-    <h1><a href="${someUrl}">ссылка на контроллер</a></h1>
+    <jsp:include page="header.jsp"/>
 
     <spring:url value="create" var="createUrl"/>
     <form action="${createUrl}" method="post" >
@@ -47,6 +45,8 @@
 
 </div>
 
+<jsp:include page="footer.jsp"/>
 
+<script src="/js/home.js"></script>
 </body>
 </html>
