@@ -37,12 +37,17 @@
     <jsp:include page="/WEB-INF/jsp/header.jsp"/>
     <jsp:include page="/WEB-INF/jsp/menu.jsp"/>
 
-    <spring:url value="create" var="createUrl"/>
-    <form action="${createUrl}" method="post" >
-        <input type="text" name="firstName" class="form-control"/>
-        <input type="text" name="lastName" class="form-control"/>
-        <input class="btn  btn-primary" type="submit" value="send">
-    </form>
+    <c:forEach var="localOrder" items="${order}">
+        <tr>
+            <spring:url value="/order" var="orderLink">
+                <spring:param name="id" value="${localOrder.id}"/>
+            </spring:url>
+            <td><a href="${orderLink}">link</a></td>
+            <td>${localOrder.entertainment}</td>
+            <td>${localOrder.food}</td>
+            <td>${localOrder.buyer}</td>
+        </tr>
+    </c:forEach>
 
 </div>
 
