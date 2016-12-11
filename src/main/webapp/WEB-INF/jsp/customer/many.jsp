@@ -7,7 +7,7 @@
     <title>Many Customers</title>
 </head>
 <body>
-
+<jsp:include page="/WEB-INF/jsp/header.jsp"/>
 <table>
     <thead>
     <tr>
@@ -18,15 +18,15 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="cust" items="${customers}">
+    <c:forEach var="food" items="${customers}">
         <tr>
-            <spring:url value="/customer" var="customerLink">
-                <spring:param name="id" value="${cust.id}"/>
+            <spring:url value="/customer" var="foodLink">
+                <spring:param name="id" value="${food.id}"/>
             </spring:url>
-            <td><a href="${customerLink}">link</a></td>
-            <td>${cust.firstName}</td>
-            <td>${cust.lastName}</td>
-            <td>${cust.login}</td>
+            <td><a href="${foodLink}">link</a></td>
+            <td>${food.firstName}</td>
+            <td>${food.lastName}</td>
+            <td>${food.login}</td>
         </tr>
     </c:forEach>
     </tbody>

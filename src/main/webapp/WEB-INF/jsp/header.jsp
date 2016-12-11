@@ -24,9 +24,9 @@
             <div class="collapse navbar-collapse" id="responsive-menu">
                 <ul class="nav navbar-nav headerbar">
                     <li><a href="/"><i class="index"></i> На главную</a></li>
-                    <li><a href="/entertainment"><i class="entertainment"></i> Развлечения</a></li>
-                    <li><a href="/food"><i class="food"></i> Еда</a></li>
-                    <li><a href="/order/edit"><i class="order"></i> Заказ</a></li>
+                    <li><a href="/customer/all"><i class="customer"></i> Customers</a></li>
+                    <li><a href="/entertainment/all"><i class="entertainment"></i> Развлечения</a></li>
+                    <li><a href="/food/all"><i class="food/many"></i> Еда</a></li>
                     <li><a href="/contact"><i class="contact"></i> Контакты</a></li>
                 </ul>
             </div>

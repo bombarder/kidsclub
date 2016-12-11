@@ -1,6 +1,8 @@
 package com.kidsclub.controller;
 
 import com.kidsclub.service.CustomerService;
+import com.kidsclub.service.EntertainmentService;
+import com.kidsclub.service.FoodService;
 import com.kidsclub.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,40 +20,15 @@ public class HomeController {
     @Autowired
     CustomerService customerService;
 
+    @Autowired
+    FoodService foodService;
+
+    @Autowired
+    EntertainmentService entertainmentService;
+
     @RequestMapping(method = {RequestMethod.GET, RequestMethod.HEAD})
     public String index() {
         return "index";
-    }
-
-    @RequestMapping(path = "/contact", method = RequestMethod.GET)
-    public String contact() {
-        return "contact";
-    }
-
-    @RequestMapping(path = "/order", method = RequestMethod.GET)
-    public String order() {
-        return "order";
-    }
-
-    @RequestMapping(path = "/food", method = RequestMethod.GET)
-    public String food() {
-        return "food";
-    }
-
-    @RequestMapping(path = "/entertainment", method = RequestMethod.GET)
-    public String entertainment() {
-        return "entertainment";
-    }
-
-    @RequestMapping(path = "/order/edit", method = RequestMethod.GET)
-    public String editOrder(Model model) {
-        model.addAttribute("order", orderService.findAll());
-        return "order/edit";
-    }
-
-    @RequestMapping(path = "/food/edit", method = RequestMethod.GET)
-    public String editFood() {
-        return "food/edit";
     }
 
     @RequestMapping(path = "/customer", method = RequestMethod.GET)
@@ -65,4 +42,45 @@ public class HomeController {
         model.addAttribute("customers", customerService.findAll());
         return "customer/many";
     }
+
+    @RequestMapping(path = "/food", method = RequestMethod.GET)
+    public String findSomeFood(@RequestParam long id, Model model) {
+        model.addAttribute("food", foodService.findOne(id));
+        return "food/one";
+    }
+
+    @RequestMapping(path = "/food/all", method = RequestMethod.GET)
+    public String findAllFood(Model model) {
+        model.addAttribute("someFood", foodService.findAll());
+        return "food/many";
+    }
+
+    @RequestMapping(path = "/entertainment", method = RequestMethod.GET)
+    public String entertainment(@RequestParam long id, Model model) {
+        model.addAttribute("entertainment", entertainmentService.findOne(id));
+        return "entertainment/one";
+    }
+
+    @RequestMapping(path = "/entertainment/all", method = RequestMethod.GET)
+    public String findAllEntertainment(Model model) {
+        model.addAttribute("someEntertainment", entertainmentService.findAll());
+        return "entertainment/many";
+    }
+
+    @RequestMapping(path = "/contact", method = RequestMethod.GET)
+    public String contact() {
+        return "contact";
+    }
+
+    @RequestMapping(path = "/order", method = RequestMethod.GET)
+    public String order() {
+        return "order";
+    }
+
+    @RequestMapping(path = "/order/edit", method = RequestMethod.GET)
+    public String editOrder(Model model) {
+        model.addAttribute("order", orderService.findAll());
+        return "order/edit";
+    }
+
 }

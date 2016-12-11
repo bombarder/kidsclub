@@ -7,24 +7,24 @@ import javax.persistence.Entity;
 @Entity
 public class Food extends AbstractPersistable<Long> {
 
-    private String Name;
-    private String Description;
+    private String name;
+    private String description;
     private int price;
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     public int getPrice() {

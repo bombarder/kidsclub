@@ -35,7 +35,6 @@
 <div class="body">
 
     <jsp:include page="/WEB-INF/jsp/header.jsp"/>
-    <jsp:include page="/WEB-INF/jsp/menu.jsp"/>
 
     <c:forEach var="localOrder" items="${order}">
         <tr>
