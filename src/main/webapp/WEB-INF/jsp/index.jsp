@@ -35,33 +35,6 @@
     <br/>
     <br/>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div id="contentText" class="col-xs-11">
-                <!--Карусель-->
-                <div id="carousel" class="carousel slide">
-
-                    <!--Индикаторы слайдов-->
-                    <ol class="carousel-indicators">
-                        <li class="active" data-target="#carousel" data-slide-to="0"></li>
-                        <li data-target="#carousel" data-slide-to="1"></li>
-                        <li data-target="#carousel" data-slide-to="2"></li>
-                    </ol>
-
-                    </div>
-
-                </div>
-                <br/>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-xs-11 text-center">
-                <div id="vk_comments"></div>
-            </div>
-        </div>
-    </div>
-
 </div>
 <br/>
 <br/>

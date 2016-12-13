@@ -1,5 +1,6 @@
 package com.kidsclub.controller;
 
+import com.kidsclub.model.Entertainment;
 import com.kidsclub.service.EntertainmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class EntertainmentController {
+
     @Autowired
     EntertainmentService entertainmentService;
 
@@ -25,4 +27,9 @@ public class EntertainmentController {
         return "entertainment/many";
     }
 
+    @RequestMapping(path = "/entertainment/add", method = RequestMethod.POST)
+    public String saveCustomer(Entertainment entertainment) {
+        entertainmentService.save(entertainment);
+        return "redirect:/entertainment/all";
+    }
 }

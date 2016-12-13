@@ -19,22 +19,28 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="food" items="${someEntertainment}">
+    <c:forEach var="entertainment" items="${someEntertainment}">
         <tr>
-            <spring:url value="/entertainment" var="foodLink">
-                <spring:param name="id" value="${food.id}"/>
+            <spring:url value="/entertainment" var="customerLink">
+                <spring:param name="id" value="${entertainment.id}"/>
             </spring:url>
-            <td><a href="${foodLink}">link</a></td>
-            <td>${food.name}</td>
-            <td>${food.description}</td>
-            <td>${food.duration}</td>
-            <td>${food.price}</td>
+            <td><a href="${customerLink}">link</a></td>
+            <td>${entertainment.name}</td>
+            <td>${entertainment.description}</td>
+            <td>${entertainment.duration}</td>
+            <td>${entertainment.price}</td>
         </tr>
     </c:forEach>
-    <form action="${createEntertainment}" method="post" >
-        <a href="/order/edit"><img src="resources/images/birthdayParty.jpg"></a>
-        <a href="/order/edit"><img src="resources/images/pool.jpeg"></a>
-        <a href="/order/edit"><img src="resources/images/wpid-clown-pennywise.jpg"></a>
-    </form>
     </tbody>
 </table>
+
+    <spring:url value="/entertainment/add" var="createUrl"/>
+    <form action="${createUrl}" method="post" >
+        <input type="text" name="name" class="form-control"/>
+        <input type="text" name="description" class="form-control"/>
+        <input type="text" name="duration" class="form-control"/>
+        <input type="text" name="price" class="form-control"/>
+        <input class="btn  btn-primary" type="submit" value="add">
+    </form>
+</body>
+</html>

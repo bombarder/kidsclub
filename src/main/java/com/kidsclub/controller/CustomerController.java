@@ -30,7 +30,6 @@ public class CustomerController {
     @RequestMapping(path = "/customer/add", method = RequestMethod.POST)
     public String saveCustomer(Customer customer) {
         customerService.save(customer);
-
         return "redirect:/customer/all";
     }
 }

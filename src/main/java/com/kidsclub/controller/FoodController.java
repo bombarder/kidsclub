@@ -25,5 +25,4 @@ public class FoodController {
         model.addAttribute("someFood", foodService.findAll());
         return "food/many";
     }
-
 }

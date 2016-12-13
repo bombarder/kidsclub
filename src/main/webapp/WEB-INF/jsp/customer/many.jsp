@@ -18,15 +18,15 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="food" items="${customers}">
+    <c:forEach var="customer" items="${customers}">
         <tr>
-            <spring:url value="/customer" var="foodLink">
-                <spring:param name="id" value="${food.id}"/>
+            <spring:url value="/customer" var="customerLink">
+                <spring:param name="id" value="${customer.id}"/>
             </spring:url>
-            <td><a href="${foodLink}">link</a></td>
-            <td>${food.firstName}</td>
-            <td>${food.lastName}</td>
-            <td>${food.login}</td>
+            <td><a href="${customerLink}">link</a></td>
+            <td>${customer.firstName}</td>
+            <td>${customer.lastName}</td>
+            <td>${customer.login}</td>
         </tr>
     </c:forEach>
     </tbody>
@@ -39,7 +39,5 @@
     <input type="text" name="login" class="form-control"/>
     <input class="btn  btn-primary" type="submit" value="add">
 </form>
-
-
 </body>
 </html>
