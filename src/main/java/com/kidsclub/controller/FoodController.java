@@ -1,5 +1,6 @@
 package com.kidsclub.controller;
 
+import com.kidsclub.model.Food;
 import com.kidsclub.service.FoodService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,5 +25,11 @@ public class FoodController {
     public String findAllFood(Model model) {
         model.addAttribute("someFood", foodService.findAll());
         return "food/many";
+    }
+
+    @RequestMapping(path = "/food/add", method = RequestMethod.POST)
+    public String saveCustomer(Food food) {
+        foodService.save(food);
+        return "redirect:/food/all";
     }
 }

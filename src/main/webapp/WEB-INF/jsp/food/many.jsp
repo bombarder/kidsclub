@@ -12,9 +12,9 @@
     <thead>
     <tr>
         <th>link</th>
-        <th>first name</th>
-        <th>last name</th>
-        <th>login</th>
+        <th>name</th>
+        <th>description</th>
+        <th>price</th>
     </tr>
     </thead>
     <tbody>
@@ -31,6 +31,15 @@
     </c:forEach>
     </tbody>
 </table>
+
+<spring:url value="/food/add" var="createUrl"/>
+<form action="${createUrl}" method="post" >
+    <input type="text" name="name" class="form-control"/>
+    <input type="text" name="description" class="form-control"/>
+    <input type="text" name="price" class="form-control"/>
+    <input class="btn  btn-primary" type="submit" value="add">
+</form>
+
 <form action="${createEntertainment}" method="post" >
     <a href="/food/edit"><img src="/resources/images/balls.jpg"></a>
     <a href="/food/edit"><img src="/resources/images/cake.jpg"></a>
