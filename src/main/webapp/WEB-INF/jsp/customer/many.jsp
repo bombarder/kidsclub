@@ -32,6 +32,14 @@
     </tbody>
 </table>
 
+<spring:url value="/customer/add" var="createUrl"/>
+<form action="${createUrl}" method="post" >
+    <input type="text" name="firstName" class="form-control"/>
+    <input type="text" name="lastName" class="form-control"/>
+    <input type="text" name="login" class="form-control"/>
+    <input class="btn  btn-primary" type="submit" value="add">
+</form>
+
 
 </body>
 </html>

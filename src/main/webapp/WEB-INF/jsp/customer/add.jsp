@@ -33,17 +33,10 @@
 <body>
 
 <div class="body">
-    <jsp:include page="header.jsp"/>
 
-    <spring:url value="create" var="createUrl"/>
-    <form action="${createUrl}" method="post" >
-        <input type="text" name="firstName" class="form-control"/>
-        <input type="text" name="lastName" class="form-control"/>
-        <input class="btn  btn-primary" type="submit" value="send">
-    </form>
+    <jsp:include page="/WEB-INF/jsp/header.jsp"/>
+
 
 </div>
-
-<script src="/js/home.js"></script>
 </body>
 </html>

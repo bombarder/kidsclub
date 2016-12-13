@@ -1,5 +1,6 @@
 package com.kidsclub.controller;
 
+import com.kidsclub.model.Customer;
 import com.kidsclub.service.CustomerService;
 import com.kidsclub.service.EntertainmentService;
 import com.kidsclub.service.FoodService;
@@ -41,6 +42,13 @@ public class HomeController {
     public String findAllCustomers(Model model) {
         model.addAttribute("customers", customerService.findAll());
         return "customer/many";
+    }
+
+    @RequestMapping(path = "/customer/add", method = RequestMethod.POST)
+    public String saveCustomer(Customer customer) {
+        customerService.save(customer);
+
+        return "redirect:/customer/all";
     }
 
     @RequestMapping(path = "/food", method = RequestMethod.GET)

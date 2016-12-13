@@ -65,7 +65,6 @@
 </div>
 <br/>
 <br/>
-<jsp:include page="footer.jsp"/>
 
 <script src="/js/home.js"></script>
 
