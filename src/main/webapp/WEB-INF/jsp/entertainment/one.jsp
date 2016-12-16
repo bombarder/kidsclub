@@ -14,5 +14,6 @@
     <br>
     Price ${entertainment.price}
 </div>
+<input type="button"  onclick="location.href='/register.htm'" value="Add to bucket" >
 </body>
 </html>
