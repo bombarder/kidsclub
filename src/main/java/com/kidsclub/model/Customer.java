@@ -2,8 +2,10 @@ package com.kidsclub.model;
 
 import org.springframework.data.jpa.domain.AbstractPersistable;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "CUSTOMERS")
 public class Customer extends AbstractPersistable<Long> {
 
     private String firstName;

@@ -3,23 +3,19 @@ package com.kidsclub.model;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "ORDERS")
 public class Order extends AbstractPersistable<Long> {
 
-    @ManyToOne(fetch= FetchType.LAZY)
-    @JoinColumn
+
     private Entertainment entertainment;
-
-    @ManyToOne
     private Food food;
-
-    @ManyToOne
     private Customer customer;
 
+    @ManyToOne
     public Entertainment getEntertainment() {
         return entertainment;
     }
@@ -28,6 +24,7 @@ public class Order extends AbstractPersistable<Long> {
         this.entertainment = entertainment;
     }
 
+    @ManyToOne
     public Food getFood() {
         return food;
     }
@@ -36,6 +33,7 @@ public class Order extends AbstractPersistable<Long> {
         this.food = food;
     }
 
+    @ManyToOne
     public Customer getCustomer() {
         return customer;
     }
