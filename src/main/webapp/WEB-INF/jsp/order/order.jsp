@@ -17,20 +17,16 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach items="${entertainments}" var="foodNumber" varStatus="foodStatus">
-        <c:if test="${foodStatus.index < n}">
-            <tr>
-                <td><c:out value="${foodNumber}" /><td>
-            </tr>
-        </c:if>
+    <c:forEach items="${entertainments}" var="entertainmentNumber">
+        <tr>
+            <td><c:out value="${entertainmentNumber}" /><td>
+        </tr>
     </c:forEach>
 
     <c:forEach items="${food}" var="foodNumber" varStatus="foodStatus">
-        <c:if test="${foodStatus.index < n}">
-            <tr>
-                <td><c:out value="${foodNumber}" /><td>
-            </tr>
-        </c:if>
+        <tr>
+            <td><c:out value="${foodNumber}" /><td>
+        </tr>
     </c:forEach>
     </tbody>
 </table>
