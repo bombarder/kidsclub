@@ -14,13 +14,8 @@ public class OrderController {
     OrderService orderService;
 
     @RequestMapping(path = "/order", method = RequestMethod.GET)
-    public String order() {
-        return "order";
-    }
-
-    @RequestMapping(path = "/order/edit", method = RequestMethod.GET)
-    public String editOrder(Model model) {
-        model.addAttribute("order", orderService.findAll());
-        return "order/edit";
+    public String showOrder(Model model) {
+        model.addAttribute("createdOrder", orderService.findAll());
+        return "order/order";
     }
 }
