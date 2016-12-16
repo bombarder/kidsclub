@@ -3,37 +3,28 @@ package com.kidsclub.model;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import java.util.List;
 
 @Entity
 @Table(name = "ORDERS")
 public class Order extends AbstractPersistable<Long> {
 
-
-    private Entertainment entertainment;
-    private Food food;
+    @ManyToOne
     private Customer customer;
+    @ManyToMany
+    private List<Entertainment> entertainments;
 
-    @ManyToOne
-    public Entertainment getEntertainment() {
-        return entertainment;
+    public List<Entertainment> getEntertainments() {
+        return entertainments;
     }
 
-    public void setEntertainment(Entertainment entertainment) {
-        this.entertainment = entertainment;
+    public void setEntertainments(List<Entertainment> entertainments) {
+        this.entertainments = entertainments;
     }
 
-    @ManyToOne
-    public Food getFood() {
-        return food;
-    }
-
-    public void setFood(Food food) {
-        this.food = food;
-    }
-
-    @ManyToOne
     public Customer getCustomer() {
         return customer;
     }

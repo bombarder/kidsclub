@@ -1,6 +1,7 @@
 package com.kidsclub.model;
 
 import org.springframework.data.jpa.domain.AbstractPersistable;
+
 import javax.persistence.Entity;
 
 @Entity
@@ -42,5 +43,4 @@ public class Entertainment extends AbstractPersistable<Long> {
     public void setPrice(int price) {
         this.price = price;
     }
-
 }
