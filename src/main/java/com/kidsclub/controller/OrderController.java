@@ -1,5 +1,6 @@
 package com.kidsclub.controller;
 
+import com.kidsclub.model.Order;
 import com.kidsclub.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,7 +21,14 @@ public class OrderController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public @ResponseBody String showOrder(@RequestParam int itemId, @RequestParam int userId) {
+    public @ResponseBody String showOrder(@RequestParam long userId, @RequestParam long itemId) {
+        Order order = orderService.addToOrder(userId, itemId);
         return "Added to your Order";
+    }
+
+    @RequestMapping(path = "/order/add", method = RequestMethod.POST)
+    public String saveOrder(Order order) {
+        orderService.save(order);
+        return "redirect:/order/all";
     }
 }

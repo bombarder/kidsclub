@@ -11,4 +11,8 @@ public interface OrderService {
 
     Order findOne(long id);
 
+    Order addToOrder(long userId, long itemId);
+
+    Order findActiveOrders(int userId);
+
 }

@@ -2,10 +2,7 @@ package com.kidsclub.model;
 
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -18,6 +15,8 @@ public class Order extends AbstractPersistable<Long> {
     private List<Entertainment> entertainments;
     @ManyToMany
     private List<Food> food;
+    @Enumerated(EnumType.STRING)
+    private OrderStatus status;
 
     public List<Food> getFood() {
         return food;
@@ -41,5 +40,13 @@ public class Order extends AbstractPersistable<Long> {
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
+    }
+
+    public OrderStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(OrderStatus status) {
+        this.status = status;
     }
 }

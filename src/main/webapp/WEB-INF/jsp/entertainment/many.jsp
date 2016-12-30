@@ -4,7 +4,7 @@
 
 <html>
 <head>
-    <title>Some Entertainment</title>
+    <title>Entertainment</title>
 </head>
 <body>
 <jsp:include page="/WEB-INF/jsp/header.jsp"/>

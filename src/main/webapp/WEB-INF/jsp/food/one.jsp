@@ -13,10 +13,7 @@
                     itemId : itemId
                 };
 
-                $.post("/order", data, function (response) {
-                    $('#container').html('<img src="https://yt3.ggpht.com/-PmpVPRyZwN0/AAAAAAAAAAI/AAAAAAAAAAA/cBHsSy9U4Vo/s88-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="no image">');
-                    alert(response);
-                })
+                $.post("/order", data)
             })
         })
     </script>
