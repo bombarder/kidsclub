@@ -26,7 +26,7 @@ public class OrderController {
         return "Added to your Order";
     }
 
-    @RequestMapping(path = "/order/add", method = RequestMethod.POST)
+    @RequestMapping(path = "/add", method = RequestMethod.POST)
     public String saveOrder(Order order) {
         orderService.save(order);
         return "redirect:/order/all";
