@@ -1,0 +1,13 @@
+body{
+    background-color: lightblue;
+}
+table{
+    font-size: large;
+}
+td{
+    border: 6px solid lightgray;
+    padding: 5px;
+}
+th{
+    color: red;
+}

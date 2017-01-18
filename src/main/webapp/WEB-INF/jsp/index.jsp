@@ -12,18 +12,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/resources/images/faces.png" type="image/x-icon">
 
-    <!-- Bootstrap -->
-    <link href="/css/bootstrap.css" rel="stylesheet">
-    <link href="/css/default.css" rel="stylesheet">
-    <link href="/css/font-awesome.css" rel="stylesheet">
-
-    <!--for VK-->
-    <script src="http://vk.com/js/api/openapi.js" type="text/javascript"></script>
-    <script type="text/javascript" src="//vk.com/js/api/openapi.js?116"></script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/js/bootstrap.js"></script>
+    <%--<!-- Bootstrap -->--%>
+    <%--<link href="/css/bootstrap.css" rel="stylesheet">--%>
+    <%--<link href="/css/default.css" rel="stylesheet">--%>
+    <%--<link href="/css/font-awesome.css" rel="stylesheet">--%>
 
 </head>
 

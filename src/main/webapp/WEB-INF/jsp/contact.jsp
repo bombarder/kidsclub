@@ -12,10 +12,10 @@
     <link rel="shortcut icon" href="http://s3.gazu.ru/favicon.ico" type="image/x-icon">
 
     <!-- css -->
-    <link href="/css/bootstrap.css" rel="stylesheet">
-    <link href="/css/default.css" rel="stylesheet">
-    <link href="/css/font-awesome.css" rel="stylesheet">
-    <link href="/css/image.css" rel="stylesheet">
+    <%--<link href="/css/bootstrap.css" rel="stylesheet">--%>
+    <%--<link href="/css/default.css" rel="stylesheet">--%>
+    <%--<link href="/css/font-awesome.css" rel="stylesheet">--%>
+    <%--<link href="/css/image.css" rel="stylesheet">--%>
     <!--js-->
     <script src="/js/bootstrap.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

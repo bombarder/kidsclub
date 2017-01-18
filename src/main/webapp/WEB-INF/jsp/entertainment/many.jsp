@@ -5,6 +5,7 @@
 <html>
 <head>
     <title>Entertainment</title>
+    <link href="<c:url value="/resources/static/css/main.css" />" rel="stylesheet">
 </head>
 <body>
 <jsp:include page="/WEB-INF/jsp/header.jsp"/>
@@ -34,13 +35,13 @@
     </tbody>
 </table>
 
-    <spring:url value="/entertainment/add" var="createUrl"/>
-    <form action="${createUrl}" method="post" >
-        <input type="text" name="name" class="form-control"/>
-        <input type="text" name="description" class="form-control"/>
-        <input type="text" name="duration" class="form-control"/>
-        <input type="text" name="price" class="form-control"/>
-        <input class="btn  btn-primary" type="submit" value="add">
-    </form>
+<spring:url value="/entertainment/add" var="createUrl"/>
+<form action="${createUrl}" method="post">
+    <input type="text" name="name" class="form-control"/>
+    <input type="text" name="description" class="form-control"/>
+    <input type="text" name="duration" class="form-control"/>
+    <input type="text" name="price" class="form-control"/>
+    <input class="btn  btn-primary" type="submit" value="add">
+</form>
 </body>
 </html>

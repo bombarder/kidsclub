@@ -9,25 +9,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@Controller("/food")
+@Controller()
 public class FoodController {
 
     @Autowired
     FoodService foodService;
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(path = "/food", method = RequestMethod.GET)
     public String findSomeFood(@RequestParam long id, Model model) {
         model.addAttribute("food", foodService.findOne(id));
         return "food/one";
     }
 
-    @RequestMapping(path = "/all", method = RequestMethod.GET)
+    @RequestMapping(path = "/food/all", method = RequestMethod.GET)
     public String findAllFood(Model model) {
         model.addAttribute("someFood", foodService.findAll());
         return "food/many";
     }
 
-    @RequestMapping(path = "/add", method = RequestMethod.POST)
+    @RequestMapping(path = "/food/add", method = RequestMethod.POST)
     public String saveCustomer(Food food) {
         foodService.save(food);
         return "redirect:/food/all";

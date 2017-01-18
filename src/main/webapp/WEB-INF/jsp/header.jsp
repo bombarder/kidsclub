@@ -6,12 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap -->
-    <link href="/css/bootstrap.css" rel="stylesheet">
-    <link href="/css/default.css" rel="stylesheet">
-    <link href="/css/font-awesome.css" rel="stylesheet">
+    <%--<!-- Bootstrap -->--%>
+    <%--<link href="/css/bootstrap.css" rel="stylesheet">--%>
+    <%--<link href="/css/default.css" rel="stylesheet">--%>
+    <%--<link href="/css/font-awesome.css" rel="stylesheet">--%>
     <!--for VK-->
-    <script src="http://vk.com/js/api/openapi.js" type="text/javascript"></script>
 
 </head>
 
