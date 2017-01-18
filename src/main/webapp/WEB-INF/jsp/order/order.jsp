@@ -17,15 +17,9 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach items="${entertainments}" var="entertainmentNumber">
+    <c:forEach items="${order}" var="orderNumber">
         <tr>
-            <td><c:out value="${entertainmentNumber}" /><td>
-        </tr>
-    </c:forEach>
-
-    <c:forEach items="${food}" var="foodNumber" varStatus="foodStatus">
-        <tr>
-            <td><c:out value="${foodNumber}" /><td>
+            <td><c:out value="${orderNumber}" /><td>
         </tr>
     </c:forEach>
     </tbody>

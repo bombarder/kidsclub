@@ -5,7 +5,7 @@
 <html>
 <head>
     <title>Entertainment</title>
-    <link href="<c:url value="/resources/static/css/main.css" />" rel="stylesheet">
+    <link href="<c:url value="/css/main.css" />" rel="stylesheet">
 </head>
 <body>
 <jsp:include page="/WEB-INF/jsp/header.jsp"/>
