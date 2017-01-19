@@ -41,15 +41,15 @@
 </form>
 
 <form action="${createEntertainment}" method="post" >
-    <a href="/food/edit"><img src="/resources/images/balls.jpg"></a>
-    <a href="/food/edit"><img src="/resources/images/cake.jpg"></a>
-    <a href="/food/edit"><img src="/resources/images/eggs.jpg"></a>
-    <a href="/food/edit"><img src="/resources/images/fresh.jpg"></a>
-    <a href="/food/edit"><img src="/resources/images/fruits.jpg"></a>
-    <a href="/food/edit"><img src="/resources/images/plate.jpg"></a>
-    <a href="/food/edit"><img src="/resources/images/sausage.jpg"></a>
-    <a href="/food/edit"><img src="/resources/images/strawberry.jpg"></a>
-    <a href="/food/edit"><img src="/resources/images/welcome.jpg"></a>
+    <a href="/food/edit"><img src="/images/balls.jpg"></a>
+    <a href="/food/edit"><img src="/images/cake.jpg"></a>
+    <a href="/food/edit"><img src="/images/eggs.jpg"></a>
+    <a href="/food/edit"><img src="/images/fresh.jpg"></a>
+    <a href="/food/edit"><img src="/images/fruits.jpg"></a>
+    <a href="/food/edit"><img src="/images/plate.jpg"></a>
+    <a href="/food/edit"><img src="/images/sausage.jpg"></a>
+    <a href="/food/edit"><img src="/images/strawberry.jpg"></a>
+    <a href="/food/edit"><img src="/images/welcome.jpg"></a>
 </form>
 
 </body>
