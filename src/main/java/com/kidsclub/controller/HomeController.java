@@ -12,7 +12,7 @@ public class HomeController {
     @Autowired
     OrderService orderService;
 
-    @RequestMapping(method = {RequestMethod.GET, RequestMethod.HEAD})
+    @RequestMapping("/")
     public String index() {
         return "index";
     }
