@@ -12,26 +12,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/resources/images/faces.png" type="image/x-icon">
 
-    <%--<!-- Bootstrap -->--%>
-    <%--<link href="/css/bootstrap.css" rel="stylesheet">--%>
-    <%--<link href="/css/default.css" rel="stylesheet">--%>
-    <%--<link href="/css/font-awesome.css" rel="stylesheet">--%>
-
 </head>
 
 <body>
-<jsp:include page="header.jsp"/>
+<jsp:include page="/WEB-INF/jsp/header.jsp"/>
 
-<div class="body">
-    <br/>
-    <br/>
-    <br/>
+<div class="container">
+    <div class="jumbotron">
+        <div class="row text-center">
+            <div class="">
+                <h2>Kids Club - Diving into the JAVA course</h2>
 
+                <h3>Outcome project</h3>
+            </div>
+        </div>
+        <div class="row text-center">
+            <img src="/images/welcome.png" width="400"
+                 th:src="@{/images/welcome.png}" />
+        </div>
+    </div>
 </div>
-<br/>
-<br/>
-
-<script src="/js/home.js"></script>
 
 </body>
 </html>

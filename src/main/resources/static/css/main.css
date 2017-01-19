@@ -1,13 +1,10 @@
-body{
-    background-color: lightblue;
+@CHARSET "UTF-8";
+
+
+h2 {
+    color: #00a3cc;
 }
-table{
-    font-size: large;
-}
-td{
-    border: 6px solid lightgray;
-    padding: 5px;
-}
-th{
-    color: red;
+
+p.form-control-static{
+    font-size: small;
 }
