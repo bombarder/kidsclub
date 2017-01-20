@@ -8,26 +8,25 @@
 <body>
 <jsp:include page="/WEB-INF/jsp/header.jsp"/>
 <div class="container">
-    <div class="jumbotron">
-
-        <table>
-            <thead>
-            <tr>
-                <th>Customer</th>
-                <th>Entertainment</th>
-                <th>Food</th>
-            </tr>
-            </thead>
-            <tbody>
-            <c:forEach items="${order}" var="orderNumber">
-                <tr>
-                    <td>
-                    <c:out value="${orderNumber}"/>
-                    <td>
+    <div class="row">
+        <div class="col-md-8 col-sm-12">
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr class="success">
+                    <th>Customer</th>
+                    <th>Entertainment</th>
+                    <th>Food</th>
                 </tr>
-            </c:forEach>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                <c:forEach items="${order}" var="orderNumber">
+                    <tr>
+                        <td><c:out value="${orderNumber}"/><td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 </body>

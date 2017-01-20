@@ -13,8 +13,8 @@
                     itemId: itemId
                 };
 
-                $.post("/order", data, function (response) {
-                    $('#container').html('<img src="images/pool.jpeg" alt="no image" height="420" width="520">');
+                $.post("/kidsclub/order", data, function (response) {
+                    $('#container');
                     alert(response);
                 })
             })
@@ -23,20 +23,34 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/jsp/header.jsp"/>
-<div class="container">
-    <div class="jumbotron">
 
-        Name ${entertainment.name}
-        <br>
-        Description ${entertainment.description}
-        <br>
-        Duration ${entertainment.duration}
-        <br>
-        Price ${entertainment.price}
-        <input id="user-id" type="hidden" value="1">
-        <input id="item-id" type="hidden" value="${entertainment.id}">
-        <div id="container"></div>
-        <button id="add-to-order">Add to bucket</button>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-sm-12">
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr class="success">
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Duration</th>
+                    <th>Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>${entertainment.name}</td>
+                    <td>${entertainment.description}</td>
+                    <td>${entertainment.duration}</td>
+                    <td>${entertainment.price}</td>
+                </tr>
+
+                <input id="user-id" type="hidden" value="1">
+                <input id="item-id" type="hidden" value="${entertainment.id}">
+                <div id="container"></div>
+                </tbody>
+            </table>
+            <button id="add-to-order">Add to bucket</button>
+        </div>
     </div>
 </div>
 </body>

@@ -1,40 +1,39 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script
-            src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script
-            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" media="screen"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 
-    <link href="/css/main.css" th:href="@{/css/main.css}"
-          rel="stylesheet" media="screen" />
+<link href="/css/main.css" rel="stylesheet"/>
 
-</head>
-<body>
 <div class="container">
-    <div th:fragment="header">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <ul class="nav navbar-nav">
-                        <li><a href="/"><i class="index"></i> На главную</a></li>
-                        <li><a href="/customer/all"><i class="customer/many"></i> Customers</a></li>
-                        <li><a href="/entertainment/all"><i class="entertainment/many"></i> Развлечения</a></li>
-                        <li><a href="/food/all"><i class="food/many"></i> Еда</a></li>
-                        <li><a href="/order"><i class="order/order"></i> Order</a></li>
-                        <li><a href="/contact"><i class="contact"></i> Контакты</a></li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav">
+                    <spring:url var="home" value="/"/>
+                    <li><a href="${home}">На главную</a></li>
+
+                    <spring:url var="cust" value="/customer/all"/>
+                    <li><a href="${cust}">Посетители</a></li>
+
+                    <spring:url var="ents" value="/entertainment/all"/>
+                    <li><a href="${ents}">Развлечения</a></li>
+
+                    <spring:url var="food" value="/food/all"/>
+                    <li><a href="${food}">Еда</a></li>
+
+                    <spring:url var="ord" value="/order"/>
+                    <li><a href="${ord}">Заказ</a></li>
+
+                    <spring:url var="cont" value="/contact"/>
+                    <li><a href="${cont}">Отзывы</a></li>
+                </ul>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
 </div>
-</body>
-</html>

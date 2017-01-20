@@ -27,8 +27,7 @@
             </div>
         </div>
         <div class="row text-center">
-            <img src="/images/welcome.png" width="400"
-                 th:src="@{/images/welcome.png}" />
+            <img src="/images/welcome.png" width="400" />
         </div>
     </div>
 </div>

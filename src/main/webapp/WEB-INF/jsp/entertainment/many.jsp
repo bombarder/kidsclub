@@ -5,47 +5,47 @@
 <html>
 <head>
     <title>Entertainment</title>
-    <link href="<c:url value="/css/main.css" />" rel="stylesheet">
 </head>
 <body>
 <jsp:include page="/WEB-INF/jsp/header.jsp"/>
 <div class="container">
-    <div class="jumbotron">
-        <table>
-            <thead>
-            <tr>
-                <th>link</th>
-                <th>name</th>
-                <th>description</th>
-                <th>duration</th>
-                <th>price</th>
-            </tr>
-            </thead>
-            <tbody>
-            <c:forEach var="entertainment" items="${someEntertainment}">
-                <tr>
-                    <spring:url value="/entertainment" var="foodOrderLink">
-                        <spring:param name="id" value="${entertainment.id}"/>
-                    </spring:url>
-                    <td><a href="${foodOrderLink}">link</a></td>
-                    <td>${entertainment.name}</td>
-                    <td>${entertainment.description}</td>
-                    <td>${entertainment.duration}</td>
-                    <td>${entertainment.price}</td>
+    <div class="col-md-8 col-sm-12">
+        <div class="row">
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr class="success">
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Duration</th>
+                    <th>Price</th>
                 </tr>
-            </c:forEach>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                <c:forEach var="entertainment" items="${someEntertainment}">
+                    <tr>
+                        <spring:url value="/entertainment" var="entertainmentOrderLink">
+                            <spring:param name="id" value="${entertainment.id}"/>
+                        </spring:url>
+                        <td><a href="${entertainmentOrderLink}">${entertainment.name}</a></td>
+                        <td>${entertainment.description}</td>
+                        <td>${entertainment.duration}</td>
+                        <td>${entertainment.price}</td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+        </div>
 
-
-        <spring:url value="/entertainment/add" var="createUrl"/>
-        <form action="${createUrl}" method="post">
-            <input type="text" name="name" class="form-control"/>
-            <input type="text" name="description" class="form-control"/>
-            <input type="text" name="duration" class="form-control"/>
-            <input type="text" name="price" class="form-control"/>
-            <input class="btn  btn-primary" type="submit" value="add">
-        </form>
+        <div class="col-md-4 col-sm-12">
+            <spring:url value="/entertainment/add" var="createUrl"/>
+            <form action="${createUrl}" method="post">
+                <input type="text" name="name" class="form-control"/>
+                <input type="text" name="description" class="form-control"/>
+                <input type="text" name="duration" class="form-control"/>
+                <input type="text" name="price" class="form-control"/>
+                <input class="btn  btn-primary" type="submit" value="add">
+            </form>
+        </div>
     </div>
 </div>
 </body>
