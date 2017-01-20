@@ -14,7 +14,7 @@
                 };
 
                 $.post("/order", data, function (response) {
-                    $('#container').html('<img src="/images/pool.jpeg" alt="no image" height="420" width="520">');
+                    $('#container').html('<img src="/images/eggs.jpg" alt="no image" height="420" width="520">');
                     alert(response);
                 })
             })
