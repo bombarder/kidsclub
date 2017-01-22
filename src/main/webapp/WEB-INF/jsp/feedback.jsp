@@ -19,14 +19,15 @@
                 </tr>
             </c:forEach>
         </div>
-        <div class="col-md-4 col-sm-12">
+        <div class="input-group">
             <spring:url value="/feedback/add" var="createUrl"/>
             <form action="${createUrl}" method="post">
-                <input type="text" name="feedbackName" class="form-control"/>
+                <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="feedback" name="feedbackName"
+                       aria-describedby="basic-addon1"/>
                 <input class="btn  btn-primary" type="submit" value="add">
             </form>
         </div>
     </div>
-</div>
 </body>
 </html>
