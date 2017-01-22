@@ -22,10 +22,10 @@
                 <tbody>
                 <c:forEach var="food" items="${someFood}">
                     <tr>
-                        <spring:url value="/food" var="entertainmentOrderLink">
+                        <spring:url value="/food" var="feedbackLink">
                             <spring:param name="id" value="${food.id}"/>
                         </spring:url>
-                        <td><a href="${entertainmentOrderLink}">${food.name}</a></td>
+                        <td><a href="${feedbackLink}">${food.name}</a></td>
                         <td>${food.description}</td>
                         <td>${food.price}</td>
                     </tr>

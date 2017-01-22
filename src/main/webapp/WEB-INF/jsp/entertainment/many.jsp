@@ -21,15 +21,15 @@
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach var="entertainment" items="${someEntertainment}">
+                <c:forEach var="feedbackName" items="${someEntertainment}">
                     <tr>
-                        <spring:url value="/entertainment" var="entertainmentOrderLink">
-                            <spring:param name="id" value="${entertainment.id}"/>
+                        <spring:url value="/entertainment" var="feedbackLink">
+                            <spring:param name="id" value="${feedbackName.id}"/>
                         </spring:url>
-                        <td><a href="${entertainmentOrderLink}">${entertainment.name}</a></td>
-                        <td>${entertainment.description}</td>
-                        <td>${entertainment.duration}</td>
-                        <td>${entertainment.price}</td>
+                        <td><a href="${feedbackLink}">${feedbackName.name}</a></td>
+                        <td>${feedbackName.description}</td>
+                        <td>${feedbackName.duration}</td>
+                        <td>${feedbackName.price}</td>
                     </tr>
                 </c:forEach>
                 </tbody>

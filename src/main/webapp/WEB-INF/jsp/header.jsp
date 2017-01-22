@@ -30,8 +30,8 @@
                     <spring:url var="ord" value="/order"/>
                     <li><a href="${ord}">Заказ</a></li>
 
-                    <spring:url var="cont" value="/contact"/>
-                    <li><a href="${cont}">Отзывы</a></li>
+                    <spring:url var="feed" value="/feedback"/>
+                    <li><a href="${feed}">Отзывы</a></li>
                 </ul>
             </div>
         </div>
