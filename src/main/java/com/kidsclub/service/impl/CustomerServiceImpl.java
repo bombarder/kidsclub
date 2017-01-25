@@ -4,6 +4,7 @@ import com.kidsclub.model.Customer;
 import com.kidsclub.repository.CustomerDao;
 import com.kidsclub.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,11 +13,15 @@ import java.util.List;
 public class CustomerServiceImpl implements CustomerService {
 
     @Autowired
-    CustomerDao customerDao;
+    private CustomerDao customerDao;
+
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Override
-    public Customer save(Customer customer){
-        return customerDao.save(customer);
+    public void save(Customer customer){
+        customer.setPass(bCryptPasswordEncoder.encode(customer.getPass()));
+        customerDao.save(customer);
     }
 
     @Override
@@ -29,4 +34,8 @@ public class CustomerServiceImpl implements CustomerService {
         return customerDao.findOne(id);
     }
 
+    @Override
+    public Customer findByCustomerName(String login) {
+        return customerDao.findByLogin(login);
+    }
 }

@@ -12,6 +12,7 @@ public class Customer extends AbstractPersistable<Long> {
     private String firstName;
     private String lastName;
     private String login;
+    private String pass;
 
     public String getFirstName() {
         return firstName;
@@ -37,12 +38,12 @@ public class Customer extends AbstractPersistable<Long> {
         this.login = login;
     }
 
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", login='" + login + '\'' +
-                '}';
+    public String getPass() {
+        return pass;
     }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
 }

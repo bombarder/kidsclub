@@ -5,9 +5,11 @@ import java.util.List;
 
 public interface CustomerService {
 
-    Customer save(Customer customer);
+    void save(Customer customer);
 
     List<Customer> findAll();
 
     Customer findOne(long id);
+
+    Customer findByCustomerName(String customerName);
 }

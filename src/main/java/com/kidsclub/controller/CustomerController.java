@@ -15,6 +15,20 @@ public class CustomerController {
     @Autowired
     CustomerService customerService;
 
+    @RequestMapping(value = "/customer/registration", method = RequestMethod.GET)
+    public String registration(Model model) {
+        model.addAttribute("userForm", new Customer());
+        return "customer/registration";
+    }
+
+
+
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login() {
+
+        return "login";
+    }
+
     @RequestMapping(path = "/customer", method = RequestMethod.GET)
     public String findOneCustomer(@RequestParam long id, Model model) {
         model.addAttribute("customer", customerService.findOne(id));
