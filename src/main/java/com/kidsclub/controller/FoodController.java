@@ -28,7 +28,7 @@ public class FoodController {
     }
 
     @RequestMapping(path = "/food/add", method = RequestMethod.POST)
-    public String saveCustomer(Food food) {
+    public String saveFood(Food food) {
         foodService.save(food);
         return "redirect:/food/all";
     }

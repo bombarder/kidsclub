@@ -14,12 +14,12 @@ public class FeedbackController {
     FeedbackService feedbackService;
 
     @RequestMapping(path = "/feedback", method = RequestMethod.GET)
-    public String contact() {
+    public String feedback() {
         return "feedback";
     }
 
     @RequestMapping(path = "/feedback/all", method = RequestMethod.GET)
-    public String findAllEntertainment(Model model) {
+    public String findAllFeedback(Model model) {
         model.addAttribute("someFeedback", feedbackService.findAll());
         return "feedback";
     }

@@ -28,7 +28,7 @@ public class EntertainmentController {
     }
 
     @RequestMapping(path = "/entertainment/add", method = RequestMethod.POST)
-    public String saveCustomer(Entertainment entertainment) {
+    public String saveEntertainment(Entertainment entertainment) {
         entertainmentService.save(entertainment);
         return "redirect:/entertainment/all";
     }
