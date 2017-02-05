@@ -3,7 +3,6 @@ package com.kidsclub.service.impl;
 import com.kidsclub.model.Food;
 import com.kidsclub.repository.FoodDao;
 import com.kidsclub.service.FoodService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,8 +10,11 @@ import java.util.List;
 @Service
 public class FoodServiceImpl implements FoodService {
 
-    @Autowired
-    FoodDao foodDao;
+    private FoodDao foodDao;
+
+    public FoodServiceImpl(FoodDao foodDao) {
+        this.foodDao = foodDao;
+    }
 
     @Override
     public Food save(Food food) {

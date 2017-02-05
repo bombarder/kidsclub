@@ -6,7 +6,6 @@ import com.kidsclub.model.OrderStatus;
 import com.kidsclub.repository.FoodDao;
 import com.kidsclub.repository.OrderDao;
 import com.kidsclub.service.OrderService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,10 +13,14 @@ import java.util.List;
 @Service
 public class OrderServiceImpl implements OrderService {
 
-    @Autowired
-    OrderDao orderDao;
-    @Autowired
-    FoodDao foodDao;
+    private OrderDao orderDao;
+
+    private FoodDao foodDao;
+
+    public OrderServiceImpl(OrderDao orderDao, FoodDao foodDao ) {
+        this.orderDao = orderDao;
+        this.foodDao = foodDao;
+    }
 
     @Override
     public Order save(Order order) {
@@ -43,16 +46,15 @@ public class OrderServiceImpl implements OrderService {
         return order;
     }
 
-//    Find active order usera
-//        esli ego net sdelat order
-//        find goods by item id
-//        add goods to the order
-//        save order
-//        return order
+    @Override
+    public Order findActiveOrder(long userId) {
+        Order activeOrder = orderDao.findByCustomerIdAndStatus(userId, OrderStatus.IN_PROCESS);
+        return activeOrder;
+    }
 
     @Override
-    public Order findActiveOrders(int userId) {
-
-       return null;
+    public Order findClosedOrder(long userId){
+        Order closedOrder = orderDao.findByCustomerIdAndStatus(userId, OrderStatus.CLOSED);
+        return closedOrder;
     }
 }

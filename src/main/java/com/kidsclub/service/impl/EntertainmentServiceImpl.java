@@ -3,7 +3,6 @@ package com.kidsclub.service.impl;
 import com.kidsclub.model.Entertainment;
 import com.kidsclub.repository.EntertainmentDao;
 import com.kidsclub.service.EntertainmentService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,8 +10,11 @@ import java.util.List;
 @Service
 public class EntertainmentServiceImpl implements EntertainmentService {
 
-    @Autowired
-    EntertainmentDao entertainmentDao;
+    private EntertainmentDao entertainmentDao;
+
+    public EntertainmentServiceImpl(EntertainmentDao entertainmentDao) {
+        this.entertainmentDao = entertainmentDao;
+    }
 
     @Override
     public Entertainment save(Entertainment entertainment){

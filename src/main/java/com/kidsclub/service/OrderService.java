@@ -13,6 +13,7 @@ public interface OrderService {
 
     Order addToOrder(long userId, long itemId);
 
-    Order findActiveOrders(int userId);
+    Order findActiveOrder(long userId);
 
+    Order findClosedOrder(long userId);
 }

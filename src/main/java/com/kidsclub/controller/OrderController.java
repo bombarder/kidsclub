@@ -31,4 +31,10 @@ public class OrderController {
         orderService.save(order);
         return "redirect:/order/all";
     }
+
+    @RequestMapping(path = "/order/all", method = RequestMethod.GET)
+    public String findAllOrders(Model model) {
+        model.addAttribute("allOrders", orderService.findAll());
+        return "order/order";
+    }
 }

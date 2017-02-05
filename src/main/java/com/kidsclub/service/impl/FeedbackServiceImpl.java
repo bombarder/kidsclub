@@ -3,15 +3,17 @@ package com.kidsclub.service.impl;
 import com.kidsclub.model.Feedback;
 import com.kidsclub.repository.FeedbackDao;
 import com.kidsclub.service.FeedbackService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
-public class FeedbackserviceImpl implements FeedbackService {
+public class FeedbackServiceImpl implements FeedbackService {
 
-    @Autowired
-    FeedbackDao feedbackDao;
+    private FeedbackDao feedbackDao;
+
+    public FeedbackServiceImpl(FeedbackDao feedbackDao) {
+        this.feedbackDao = feedbackDao;
+    }
 
     @Override
     public Feedback save(Feedback feedback) {
