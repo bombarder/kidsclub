@@ -9,12 +9,15 @@ import java.util.List;
 @Table(name = "ORDERS")
 public class Order extends AbstractPersistable<Long> {
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Customer customer;
-    @ManyToMany
+
+    @ManyToMany(fetch = FetchType.LAZY)
     private List<Entertainment> entertainments;
-    @ManyToMany
+
+    @ManyToMany(fetch = FetchType.LAZY)
     private List<Food> food;
+
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
 
